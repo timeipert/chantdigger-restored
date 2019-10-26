@@ -16,5 +16,5 @@ altrömischen Graduale Vat. lat. 5319, Einführung von Bruno Stäblein; Notentei
 kritischer Bericht und Verzeichnisse von Margareta Landwehr-Melnicki, Kassel:
 Bärenreiter, 1970 [Monumenta monodica medii aevi II]).
 
-Die Gesänge werden in einem für die Editionssoftware MonodiPlus lesbaren JSON-Format und in MEI-Daten zur Verfügung gestellt. (In Arbeit)
+Die Gesänge werden in einem für die Editionssoftware monodi+ lesbaren JSON-Format und in MEI zur Verfügung gestellt. (In Arbeit)
 
