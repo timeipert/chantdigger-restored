@@ -1,0 +1,33 @@
+{
+  "name": "maxhaascorpora",
+  "version": "1.0.0",
+  "description": "Transform the old data",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsc transform.ts",
+    "test": "mocha -r ts-node/register *.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timeipert/maxhaascorpora.git"
+  },
+  "author": "Tim Eipert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timeipert/maxhaascorpora/issues"
+  },
+  "homepage": "https://github.com/timeipert/maxhaascorpora#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@types/node": "^12.11.2",
+    "xmlbuilder": "^13.0.2"
+  }
+}
