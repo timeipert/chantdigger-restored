@@ -1,0 +1,16 @@
+body {
+    padding: 2rem;
+}
+input, textarea, canvas {
+    border: 1px solid #b5b5cd !important;
+    background: #e8e8f6 !important;
+    border-radius: 10px;
+}
+.info {
+    margin: 0 0 2em;
+    font-size: 0.7em;
+    padding: 1em;
+    color: darkgoldenrod;
+    background: lightyellow;
+    border: 1px solid yellow;
+}
