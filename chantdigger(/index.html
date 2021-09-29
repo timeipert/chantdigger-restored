@@ -1,0 +1,167 @@
+
+
+                        <!doctype html>
+                        <html>
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="author" content="Max Haas">
+                            <meta name="description" content="Programm ChantDigger fuer Choralforschung">
+                            <meta name="keywords" content="Max Haas, Musikwissenschaft, ChantDigger, oralhistoryofchant, oral history of chant, oral tradition, gregorian chant, oral tradition of chant, gregorianischer choral, choral, einstimmigkeit, plain chant, computergestützte musikwissenschaft, computer aided musicology, digitale Geisteswissenschaften, digital humanities">
+                            <title>Formular</title>
+                            <link rel="stylesheet" href="style.css"/>
+                            <script src="./jquery-1.11.1.min.js"></script>
+                            <script type="text/javascript" src="./chantdig_extern.js"></script>
+
+
+                        </head>
+
+
+
+                        <body>
+                        <h1>Chant Digger (Max Haas)</h1>
+                        <div class="info">
+                            Restored version from http://www.oralhistoryofchant.ch/chantdigger via <a href="https://web.archive.org/web/20180813165222/http://www.oralhistoryofchant.ch/chantdigger">WayBackMachine</a>. May be broken. Created by Max Haas and published with a vague license statement: "Code und Daten sind im Sinne eines
+                            open source-Unternehmens frei: Ich bitte, eventuelle Eigenprodukte neu zu benennen, damit mir der Name ChantDigger
+                            bleibt". You will find more information in the <a href="GuidedTour.pdf" target="_blank">Guided Tour</a> and <a href="Zusammenfassung.pdf" target="_blank">Kurzanleitung</a> - Tim Eipert, September 2021 (<a target="_blank"  href="https://github.com/timeipert">Github</a> - <a target="_blank" href="https://www.musikwissenschaft.uni-wuerzburg.de/team/eipert-tim-ma/">Uni Würzburg</a>) </div>
+                        </div>
+
+                        <!-- Vorspann: Version -->
+
+                        <canvas id="version" width="600" height="35" style="border:1px solid #000000;
+background-color:#FFFAF0"></canvas>
+
+
+                        <!-- Start -->
+
+                        <p>
+                            <button class="butt2" onclick="startReader()" id="Loader">Load the data</button>
+                        </p>
+
+
+                        <!-- Textausgabe-->
+                        <textarea name="textarea" class="txtar" readonly="true" cols="75" rows="10" id="ChantList" title="ChantList"> </textarea>&nbsp;&nbsp;
+                        <p>
+
+
+                            &nbsp;&nbsp;
+                            <button class="butt1" id="commOnOff" onclick="commentaryOnOff()">With notes
+                            </button>
+                            <button class="butt1" id="wortsuche" onclick="startWortsuche()">All word forms
+                            </button>
+
+
+                        </p>
+
+
+                        <!-- Datenbankinhalte -->
+                        <!-- Datenbankinhalte -->
+                        <label for="chantfam"> Corpus + genre:</label>
+                        <select name="select" style="width: 80px; background: #CCFFFF; color: black;" id="chantfam">
+                            <option value="alle">all</option>
+                            <option value="GR">GR</option>
+                            <option value="AR">AR</option>
+                            <option value="ML">ML</option>
+                        </select>&nbsp;&nbsp;
+                        <select name="select2" style="width: 80px; background: #CCFFFF; color: black;" id="chantgattung">
+                            <option value="alle">all</option>
+                            <option value="Introitus">Introitus</option>
+                            <option value="Ingressa">Ingressa</option>
+                            <option value="Alleluia">Alleluia</option>
+                            <option value="Graduale">Graduale</option>
+                            <option value="Psalmellus">Psalmellus</option>
+                            <option value="Tractus">Tractus</option>
+                            <option value="Communio">Communio</option>
+                            <option value="Offertorium">Offertorium</option>
+                        </select>&nbsp;&nbsp;
+                        <button class="butt4" onclick="giveChantContents()">Contents</button>
+                        <button class="butt4" onclick="sucheTeilstring()">Word in title
+                        </button>
+                        <input name="teilString" style="width:100px;" type="text" id="suchString" size="15" maxlength="22">
+
+
+                        </button>Page: <input type="number" style="width:30px;" name="choose" min="1" max="500" step="1" value="1" id="seite">
+
+
+                        </p>
+
+
+
+                        <label>Presentation of SM 1: <select name="SM1Darstellung" style="width:70px;" id="sm1display">
+                            <option value="0">normal</option>
+                            <option value="1">first tone</option>
+                            <option value="2">last tone</option>
+                            <option value="3">first and last tone</option>
+                            <option value="4">Show with clicks</option>
+                        </select>
+                        </label>
+
+
+                        <!-- Suchmodus 1 -->
+
+
+                        <button class="butt3" onclick="displayChant()">SM 1: Chant</button>
+                        <input name="Gesang" style="width:150px;" type="text" id="chant" size="300" maxlength="300">
+
+
+                        <label>Delete number(s):</label>
+                        <input name="Streichen" style="width:50px;" type="text" id="streicheNums" size="10" maxlength="12">
+
+
+                        <button class="butt3" onclick="findeAchsen()">Find axis</button>
+                        <input name="Achsentöne:" style="width:50px;" type="text" id="findeAchsen" size="10" maxlength="12">
+                        <input name="achseMitChant" style="width:50px;" type="text" id="achseMitChant" size="10" maxlength="12">
+
+
+                        <p>
+
+
+                            <button class="butt3" onclick="organisiereMorphDisplay()">SM 2: Syllable segment</button>
+                            <input name="Strecken" style="width:100px;" type="text" id="strecken" size="300" maxlength="500">
+                            <select name="Aehnlichkeiten" style="width:60px;" id="aehnlichfcns">
+                                <option value="0">without</option>
+                                <option value="1">Points</option>
+                                <option value="2">Isomorphisms</option>
+                                <option value="3">Shape by intervals
+                                </option>
+                                <option value="4">Shape by shape</option>
+                            </select>
+
+
+                            <button class="butt3" onclick="organisiereSearchDisplay()">SM 3: Sequences</button>
+                            <input name="Folgen" style="width:100px;" type="text" id="folgen" size="300" maxlength="500">
+
+
+
+                            <button class="butt3" onclick="macheVKN()">SM 4: BNA</button>
+                            <input name="VKN" style="width:50px;" type="text" id="vkn" size="10" maxlength="12">
+
+
+                            <button class="butt3" onclick="sucheSilbenwerte()">SM 5: Syllables</button>
+                            <input name="Silben" style="width:30px;" type="text" id="silben" size="10" maxlength="12">
+
+
+                            <canvas class="canv" id="ZeigeAnzahl">
+                            </canvas>
+                        </p>
+
+
+                        <!-- Ausgabehilfen: Korrektur, Bild -->
+
+                        </p>
+                        <button class="butt4" onclick="corrCanvas()" id="corrCanvas">to the right</button>
+                        <button class="butt4" onclick="saveCanvas()" id="saveCanvas">Photograph</button>
+                        </p>
+                        </p>
+
+
+                        <canvas id="koordinaten" width="8500" height="35" style="
+background-color:#FFFAF0"></canvas>
+
+
+                        <canvas id="ausgabe" width="8500" height="3500" style="border:1px solid #000000;
+background-color:#FFFAF0"></canvas>
+
+
+                        </body>
+                        </html>
+
