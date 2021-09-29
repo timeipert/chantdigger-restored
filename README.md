@@ -1,6 +1,6 @@
 # MaxHaasCorpora
 
-Eine aufbereitete Version der vierer Teilkorpora einstimmiger mittelalterlicher Gesänge von Max Haas: http://www.oralhistoryofchant.ch/chantdigger
+Eine aufbereitete Version der vier Teilkorpora einstimmiger mittelalterlicher Gesänge von Max Haas. (Bis vor Kurzem über http://www.oralhistoryofchant.ch/chantdigger aufrufbar, jetzt in einer gespiegelten Version hier: https://chantdigger.web.app/)
 
 Das Repositorium dient dazu, die von Haas erarbeiteten Daten zu spiegeln, in ein modernes Format zu überführen und damit für den Gebrauch in der Forschungscommunity zu erhalten.
 
@@ -16,5 +16,8 @@ altrömischen Graduale Vat. lat. 5319, Einführung von Bruno Stäblein; Notentei
 kritischer Bericht und Verzeichnisse von Margareta Landwehr-Melnicki, Kassel:
 Bärenreiter, 1970 [Monumenta monodica medii aevi II]).
 
+
+
 Die Gesänge werden in einem für die Editionssoftware monodi+ lesbaren JSON-Format und in MEI zur Verfügung gestellt. (In Arbeit)
+
 
