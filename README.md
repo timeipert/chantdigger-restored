@@ -1,6 +1,6 @@
 # Max Haas Monophonic Medieval Chants + ChantDigger
 
-Eine aufbereitete Version der vier Teilkorpora einstimmiger mittelalterlicher Gesänge von Max Haas. (Bis vor Kurzem über http://www.oralhistoryofchant.ch/chantdigger aufrufbar, jetzt in einer gespiegelten Version hier: https://chantdigger.web.app/)
+Eine aufbereitete Version der vier Teilkorpora einstimmiger mittelalterlicher Gesänge von Max Haas. (Bis vor Kurzem über http://www.oralhistoryofchant.ch/chantdigger aufrufbar, jetzt in einer gespiegelten Version hier: https://chantdigger.web.app/ bzw. nun auch wieder unter https://oralhistoryofchant.ch/)
 
 Das Repositorium dient dazu, die von Haas erarbeiteten Daten zu spiegeln, in ein modernes Format zu überführen und damit für den Gebrauch in der Forschungscommunity zu erhalten.
 
