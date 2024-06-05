@@ -22,7 +22,10 @@
                         <div class="info">
                             Restored version from http://www.oralhistoryofchant.ch/chantdigger via <a href="https://web.archive.org/web/20180813165222/http://www.oralhistoryofchant.ch/chantdigger">WayBackMachine</a>. May be broken. Created by Max Haas and published with a vague license statement: "Code und Daten sind im Sinne eines
                             open source-Unternehmens frei: Ich bitte, eventuelle Eigenprodukte neu zu benennen, damit mir der Name ChantDigger
-                            bleibt". You will find more information in the <a href="GuidedTour.pdf" target="_blank">Guided Tour</a> and <a href="Zusammenfassung.pdf" target="_blank">Kurzanleitung</a> - Tim Eipert, September 2021 (<a target="_blank"  href="https://github.com/timeipert">Github</a> - <a target="_blank" href="https://www.musikwissenschaft.uni-wuerzburg.de/team/eipert-tim-ma/">Uni Würzburg</a>) </div>
+                            bleibt". You will find more information in the <a href="GuidedTour.pdf" target="_blank">Guided Tour</a> and <a href="Zusammenfassung.pdf" target="_blank">Kurzanleitung</a> - Tim Eipert, September 2021 (<a target="_blank"  href="https://github.com/timeipert">Github</a> - <a target="_blank" href="https://www.musikwissenschaft.uni-wuerzburg.de/team/eipert-tim-ma/">Uni Würzburg</a>)
+                        <br/>
+                            Now you have the ability to load the original data transcribed from Max Haas as well as the editions of Corpus Monodicum (<a href="https://corpus-monodicum.de/">CM</a>). This is just a experimental version and there might be some issues. Tim Eipert - 05.06.2024.
+                        </div>
                         </div>
 
                         <!-- Vorspann: Version -->
@@ -34,7 +37,8 @@ background-color:#FFFAF0"></canvas>
                         <!-- Start -->
 
                         <p>
-                            <button class="butt2" onclick="startReader()" id="Loader">Load the data</button>
+                            <button class="butt2" onclick="startReader()" >Load Max Haas Dataset</button>
+                            <button class="butt2" onclick="startReaderCM()">Load CM Dataset</button>
                         </p>
 
 
@@ -154,11 +158,11 @@ background-color:#FFFAF0"></canvas>
                         </p>
 
 
-                        <canvas id="koordinaten" width="8500" height="35" style="
+                        <canvas id="koordinaten" width="30000" height="35" style="
 background-color:#FFFAF0"></canvas>
 
 
-                        <canvas id="ausgabe" width="8500" height="3500" style="border:1px solid #000000;
+                        <canvas id="ausgabe" width="30000" height="3500" style="border:1px solid #000000;
 background-color:#FFFAF0"></canvas>
 
 
