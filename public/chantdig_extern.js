@@ -103,6 +103,14 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
         return contentsOfFileAsString;
     }
 
+    function getContentsGS() {
+        var pathOfFileToRead = "./chantdigger_graduale_synopticum.txt", contentsOfFileAsString = FileHelper.readStringFromFileAtPath (pathOfFileToRead);
+        // var pathOfFileToRead = "AllCh.text", contentsOfFileAsString = FileHelper.readStringFromFileAtPath(pathOfFileToRead);
+        return contentsOfFileAsString;
+    }
+
+
+
 
     function FileHelper() {
     }
@@ -157,6 +165,26 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
 
     function startReaderCM() {
         var mm = getContentsCM(), curLength = mm.length / 7, starter = 0, ender = 7, i, yy, ch, start, end, time;
+        start = new Date().getTime();
+        commentaryOnOff();
+        for (i = 0; i < curLength; i++) {
+            yy = mm.slice(starter, ender);
+            ch = new makeChant(i, yy[1], yy[2], yy[3], yy[4], yy[5], yy[6]);
+            starter += 7;
+            ender += 7;
+            StoredData.push(ch);
+        }
+        storedDataLimit = starter / 7; // errechne die Zahl der Datensätze
+        bucheMorphs();
+        btnColor('Loader', 'lightblue');
+        zeigeCanvasMetrik();
+        end = new Date().getTime();
+        time = end - start;
+        gibVersionUndDatum(time / 1000.0);
+    }
+
+    function startReaderGS() {
+        var mm = getContentsGS(), curLength = mm.length / 7, starter = 0, ender = 7, i, yy, ch, start, end, time;
         start = new Date().getTime();
         commentaryOnOff();
         for (i = 0; i < curLength; i++) {
